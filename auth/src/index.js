@@ -10,13 +10,13 @@ const postSchema = new mongoose.Schema({
 const Posts = mongoose.model("Posts", postSchema);
 
 app.get('/test', (req, res) => {
-    res.send('Our API server working! With new date' + (new Date()).toString());
+    res.send('Our AUTH server working! With new date' + (new Date()).toString());
 });
 
 const startServer = () => {
     app.listen(port, () => {
-        console.log(`Starter API service: ${host}:${port}`)
-        console.log(`Our API DB runned on ${db}`)
+        console.log(`Starter AUTH service: ${host}:${port}`)
+        console.log(`Our AUTH_DB runned on ${db}`)
         console.log(`======================++++++++++============================`); 
     });
 
